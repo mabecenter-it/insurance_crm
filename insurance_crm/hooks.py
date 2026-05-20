@@ -263,17 +263,15 @@ require_type_annotated_api_methods = True
 # import fixtures
 fixtures = [
     {
-        "doctype": "CRM Global Settings",
-        # opcional: filtra solo los registros que te interesan
-        "filters": [
-            ["dt", "in", [
-                "CRM Lead",
-                "CRM Deal",
-                "Contact",
-                "CRM Organization",
-                "CRM Task",
-                "CRM Call Log"
-            ]]
-        ],
+        "doctype": "Custom Field"
     },
+    {
+        "doctype": "Property Setter"
+    },
+    {
+        "doctype": "Client Script"
+    },
+    {
+        "doctype": "CRM Global Settings"
+    }
 ]
