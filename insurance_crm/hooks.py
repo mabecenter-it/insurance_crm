@@ -260,12 +260,34 @@ require_type_annotated_api_methods = True
 # ignore_translatable_strings_from = []
 
 
+# import fixtures
 fixtures = [
-    "Custom Field",
-    "Property Setter",
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["dt", "in", [
+                "Sales Order",
+                "Customer",
+                "Contact",
+                "Address",
+                "Packed Item",
+                "Lead",
+            ]]
+        ],
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["doc_type", "in", [
+                "Sales Order",
+                "Customer",
+                "Contact",
+                "Address",
+                "Packed Item",
+                "Lead",
+            ]]
+        ],
+    },
     "Client Script",
-    "Workspace",
-    "Workflow",
-    "Role",
-    "Print Format"
+    "Server Script",
 ]
