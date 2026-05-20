@@ -263,15 +263,29 @@ require_type_annotated_api_methods = True
 # import fixtures
 fixtures = [
     {
-        "doctype": "Custom Field"
+        "dt": "Custom Field",
+        "filters": [
+            ["dt", "in", [
+                "Sales Order",
+                "Customer",
+                "Contact",
+                "Address",
+                "Packed Item",
+            ]]
+        ],
     },
     {
-        "doctype": "Property Setter"
+        "dt": "Property Setter",
+        "filters": [
+            ["doc_type", "in", [
+                "Sales Order",
+                "Customer",
+                "Contact",
+                "Address",
+                "Packed Item",
+            ]]
+        ],
     },
-    {
-        "doctype": "Client Script"
-    },
-    {
-        "doctype": "CRM Global Settings"
-    }
+    "Client Script",
+    "Server Script",
 ]
