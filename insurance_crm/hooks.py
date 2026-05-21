@@ -262,30 +262,10 @@ require_type_annotated_api_methods = True
 
 # import fixtures
 fixtures = [
-    {
-        "dt": "Custom Field",
-        "filters": [
-            ["dt", "in", [
-                "Sales Order",
-                "Customer",
-                "Contact",
-                "Address",
-                "Packed Item",
-            ]]
-        ],
-    },
-    {
-        "dt": "Property Setter",
-        "filters": [
-            ["doc_type", "in", [
-                "Sales Order",
-                "Customer",
-                "Contact",
-                "Address",
-                "Packed Item",
-            ]]
-        ],
-    },
+    
+    "Custom Field",
+    "Property Setter",
     "Client Script",
     "Server Script",
+
 ]
