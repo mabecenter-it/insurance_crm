@@ -14,7 +14,11 @@ class Carrier(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		rating_tqhk: DF.Rating
+		active: DF.Check
+		carrier_name: DF.Data
+		payer_id: DF.Data | None
+		support_phone: DF.Phone | None
+		website: DF.Data | None
 	# end: auto-generated types
 
 	pass
