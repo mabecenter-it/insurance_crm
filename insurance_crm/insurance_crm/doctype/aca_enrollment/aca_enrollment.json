@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "allow_bulk_edit": 1,
+ "allow_rename": 1,
+ "creation": "2026-05-21 09:34:58.428223",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "lead",
+  "policy_status",
+  "household_size",
+  "income",
+  "taxes",
+  "effective_date",
+  "state",
+  "aptc_eligible"
+ ],
+ "fields": [
+  {
+   "fieldname": "lead",
+   "fieldtype": "Link",
+   "label": "Lead",
+   "options": "CRM Lead"
+  },
+  {
+   "fieldname": "policy_status",
+   "fieldtype": "Select",
+   "label": "Policy status",
+   "options": "\nSin Digitar\nPending Documents\nSubmitted\nApproved\nActive\nCancelled\nExpired\nRenewal Pending"
+  },
+  {
+   "fieldname": "household_size",
+   "fieldtype": "Int",
+   "label": "Household Size"
+  },
+  {
+   "fieldname": "income",
+   "fieldtype": "Currency",
+   "label": "Income"
+  },
+  {
+   "fieldname": "taxes",
+   "fieldtype": "Select",
+   "label": "Taxes",
+   "options": "\nSingle\nMarried Filing Jointly\nMarried Filing Separately\nHead of Household"
+  },
+  {
+   "fieldname": "effective_date",
+   "fieldtype": "Date",
+   "label": "Effective Date"
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Select",
+   "label": "State",
+   "options": "\nAZ\nCA\nFL\nGA\nIL\nIN\nLA\nMA\nNC\nNE\nNJ\nOH\nSC\nTN\nTX\nWI"
+  },
+  {
+   "default": "0",
+   "fieldname": "aptc_eligible",
+   "fieldtype": "Check",
+   "label": "APTC Eligible"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-21 09:54:20.467668",
+ "modified_by": "Administrator",
+ "module": "Insurance CRM",
+ "name": "ACA Enrollment",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
