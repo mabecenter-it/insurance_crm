@@ -19,6 +19,7 @@ class ACAEnrollment(Document):
 		household_size: DF.Int
 		income: DF.Currency
 		lead: DF.Link | None
+		naming_series: DF.Literal["ACA-.YYYY.-.#####"]
 		policy_status: DF.Literal["", "Sin Digitar", "Pending Documents", "Submitted", "Approved", "Active", "Cancelled", "Expired", "Renewal Pending"]
 		state: DF.Literal["", "AZ", "CA", "FL", "GA", "IL", "IN", "LA", "MA", "NC", "NE", "NJ", "OH", "SC", "TN", "TX", "WI"]
 		taxes: DF.Literal["", "Single", "Married Filing Jointly", "Married Filing Separately", "Head of Household"]

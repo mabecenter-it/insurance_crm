@@ -2,6 +2,7 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
+ "autoname": "naming_series:",
  "creation": "2026-05-21 09:34:58.428223",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -13,7 +14,8 @@
   "taxes",
   "effective_date",
   "state",
-  "aptc_eligible"
+  "aptc_eligible",
+  "naming_series"
  ],
  "fields": [
   {
@@ -60,15 +62,23 @@
    "fieldname": "aptc_eligible",
    "fieldtype": "Check",
    "label": "APTC Eligible"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "ACA-.YYYY.-.#####",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-21 09:54:20.467668",
+ "modified": "2026-05-21 11:24:34.284350",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "ACA Enrollment",
+ "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
  "permissions": [
   {
