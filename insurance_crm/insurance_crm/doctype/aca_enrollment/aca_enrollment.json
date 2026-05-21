@@ -15,7 +15,9 @@
   "effective_date",
   "state",
   "aptc_eligible",
-  "naming_series"
+  "naming_series",
+  "household_members",
+  "enrollment_documents"
  ],
  "fields": [
   {
@@ -69,12 +71,24 @@
    "fieldtype": "Link",
    "label": "Contacto",
    "options": "Contact"
+  },
+  {
+   "fieldname": "household_members",
+   "fieldtype": "Table",
+   "label": "Household Members",
+   "options": "Household Member"
+  },
+  {
+   "fieldname": "enrollment_documents",
+   "fieldtype": "Table",
+   "label": "Enrollment Documents",
+   "options": "Enrollment Document"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-21 11:31:44.283075",
+ "modified": "2026-05-21 15:11:53.455260",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "ACA Enrollment",

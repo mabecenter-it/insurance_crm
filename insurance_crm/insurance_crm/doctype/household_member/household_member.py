@@ -14,9 +14,13 @@ class HouseholdMember(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
+		birth_date: DF.Date | None
+		full_name: DF.Data
+		needs_coverage: DF.Check
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
+		relationship: DF.Literal["ESPOSO(A)", "HIJO(A)", "NIETO(A)", "MADRE", "PADRE", "ABUELO(A)"]
 	# end: auto-generated types
 
 	pass
