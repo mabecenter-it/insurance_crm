@@ -13,10 +13,14 @@ class ACAEnrollment(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
+		from insurance_crm.insurance_crm.doctype.enrollment_document.enrollment_document import EnrollmentDocument
+		from insurance_crm.insurance_crm.doctype.household_member.household_member import HouseholdMember
 
 		aptc_eligible: DF.Check
 		contact: DF.Link | None
 		effective_date: DF.Date | None
+		enrollment_documents: DF.Table[EnrollmentDocument]
+		household_members: DF.Table[HouseholdMember]
 		household_size: DF.Int
 		income: DF.Currency
 		naming_series: DF.Literal["ACA-.YYYY.-.#####"]
