@@ -7,7 +7,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "lead",
+  "contact",
   "policy_status",
   "household_size",
   "income",
@@ -18,12 +18,6 @@
   "naming_series"
  ],
  "fields": [
-  {
-   "fieldname": "lead",
-   "fieldtype": "Link",
-   "label": "Lead",
-   "options": "CRM Lead"
-  },
   {
    "fieldname": "policy_status",
    "fieldtype": "Select",
@@ -69,12 +63,18 @@
    "label": "Naming Series",
    "options": "ACA-.YYYY.-.#####",
    "read_only": 1
+  },
+  {
+   "fieldname": "contact",
+   "fieldtype": "Link",
+   "label": "Contacto",
+   "options": "Contact"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-21 11:24:34.284350",
+ "modified": "2026-05-21 11:31:44.283075",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "ACA Enrollment",

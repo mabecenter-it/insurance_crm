@@ -15,10 +15,10 @@ class ACAEnrollment(Document):
 		from frappe.types import DF
 
 		aptc_eligible: DF.Check
+		contact: DF.Link | None
 		effective_date: DF.Date | None
 		household_size: DF.Int
 		income: DF.Currency
-		lead: DF.Link | None
 		naming_series: DF.Literal["ACA-.YYYY.-.#####"]
 		policy_status: DF.Literal["", "Sin Digitar", "Pending Documents", "Submitted", "Approved", "Active", "Cancelled", "Expired", "Renewal Pending"]
 		state: DF.Literal["", "AZ", "CA", "FL", "GA", "IL", "IN", "LA", "MA", "NC", "NE", "NJ", "OH", "SC", "TN", "TX", "WI"]
