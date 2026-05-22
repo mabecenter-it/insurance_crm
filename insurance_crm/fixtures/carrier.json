@@ -1,35 +1,24 @@
 [
  {
   "active": 1,
-  "carrier_name": "Ambetter",
+  "carrier_name": "Ambetter Health",
   "docstatus": 0,
   "doctype": "Carrier",
-  "modified": "2026-05-21 10:55:25.226526",
-  "name": "vd861tcpa3",
+  "modified": "2026-05-22 09:57:03.404442",
+  "name": "Ambetter Health",
   "payer_id": "2",
-  "support_phone": "+1-9258412201",
+  "support_phone": "+1-9852102147",
   "website": "https://broker.ambetterhealth.com/s/login/?ec=302&startURL=%2Fs%2F"
  },
  {
   "active": 1,
-  "carrier_name": "Molina",
+  "carrier_name": "Oscar",
   "docstatus": 0,
   "doctype": "Carrier",
-  "modified": "2026-05-21 10:37:55.557438",
-  "name": "123c2hgm58",
-  "payer_id": "3",
-  "support_phone": "+1-9258412201",
-  "website": "https://account.evolvenxt.com/login.htm"
- },
- {
-  "active": 1,
-  "carrier_name": "Florida Blue",
-  "docstatus": 0,
-  "doctype": "Carrier",
-  "modified": "2026-05-21 10:38:49.492818",
-  "name": "1iu14v2f8d",
-  "payer_id": "4",
-  "support_phone": "+1-9258412201",
+  "modified": "2026-05-22 08:51:17.091854",
+  "name": "Oscar",
+  "payer_id": "1",
+  "support_phone": "+1-9852102147",
   "website": "https://accounts.hioscar.com/account/login/"
  }
 ]
