@@ -8,7 +8,7 @@
  "engine": "InnoDB",
  "field_order": [
   "section_break_jqd2",
-  "full_name",
+  "first_name",
   "relationship",
   "birth_date",
   "needs_coverage"
@@ -19,35 +19,43 @@
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "full_name",
-   "fieldtype": "Data",
+   "fieldname": "relationship",
+   "fieldtype": "Select",
    "in_list_view": 1,
-   "label": "Full Name",
+   "label": "Relationship",
+   "options": "ESPOSO(A)\nHIJO(A)\nNIETO(A)\nMADRE\nPADRE\nABUELO(A)",
    "reqd": 1
   },
   {
-   "fieldname": "relationship",
-   "fieldtype": "Select",
-   "label": "Relationship",
-   "options": "ESPOSO(A)\nHIJO(A)\nNIETO(A)\nMADRE\nPADRE\nABUELO(A)"
-  },
-  {
+   "fetch_from": "first_name.custom_dob",
    "fieldname": "birth_date",
    "fieldtype": "Date",
-   "label": "Birth Date"
+   "in_list_view": 1,
+   "label": "Birth Date",
+   "read_only": 1
   },
   {
    "default": "0",
    "fieldname": "needs_coverage",
    "fieldtype": "Check",
-   "label": "Needs Coverage"
+   "in_list_view": 1,
+   "label": "Needs Coverage",
+   "reqd": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contacto",
+   "options": "Contact",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-21 15:09:57.154733",
+ "modified": "2026-05-22 14:43:50.674618",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Household Member",
