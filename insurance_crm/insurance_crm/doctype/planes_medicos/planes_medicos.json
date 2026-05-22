@@ -2,7 +2,7 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "autoname": "field:nombre_plan",
+ "autoname": "field:plan_id",
  "creation": "2026-05-22 08:24:04.592341",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -27,8 +27,7 @@
   {
    "fieldname": "nombre_plan",
    "fieldtype": "Data",
-   "label": "Nombre plan",
-   "unique": 1
+   "label": "Nombre plan"
   },
   {
    "fieldname": "categoria",
@@ -39,13 +38,14 @@
   {
    "fieldname": "plan_id",
    "fieldtype": "Data",
-   "label": "Plan ID"
+   "label": "Plan ID",
+   "unique": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-22 09:07:17.352858",
+ "modified": "2026-05-22 13:40:56.695283",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Planes Medicos",
