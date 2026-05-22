@@ -15,7 +15,7 @@ class HouseholdMember(Document):
 		from frappe.types import DF
 
 		birth_date: DF.Date | None
-		full_name: DF.Data
+		first_name: DF.Link
 		needs_coverage: DF.Check
 		parent: DF.Data
 		parentfield: DF.Data
