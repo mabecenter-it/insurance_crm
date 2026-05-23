@@ -1,17 +1,6 @@
 [
  {
   "active": 1,
-  "carrier_name": "Ambetter Health",
-  "docstatus": 0,
-  "doctype": "Carrier",
-  "modified": "2026-05-22 09:57:03.404442",
-  "name": "Ambetter Health",
-  "payer_id": "2",
-  "support_phone": "+1-9852102147",
-  "website": "https://broker.ambetterhealth.com/s/login/?ec=302&startURL=%2Fs%2F"
- },
- {
-  "active": 1,
   "carrier_name": "Oscar",
   "docstatus": 0,
   "doctype": "Carrier",
@@ -20,5 +9,16 @@
   "payer_id": "1",
   "support_phone": "+1-9852102147",
   "website": "https://accounts.hioscar.com/account/login/"
+ },
+ {
+  "active": 1,
+  "carrier_name": "Ambetter Health",
+  "docstatus": 0,
+  "doctype": "Carrier",
+  "modified": "2026-05-22 09:57:03.404442",
+  "name": "Ambetter Health",
+  "payer_id": "2",
+  "support_phone": "+1-9852102147",
+  "website": "https://broker.ambetterhealth.com/s/login/?ec=302&startURL=%2Fs%2F"
  }
 ]
