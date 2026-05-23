@@ -23,6 +23,7 @@ class HouseholdMember(Document):
 		parentfield: DF.Data
 		parenttype: DF.Data
 		relationship: DF.Literal["ESPOSO(A)", "HIJO(A)", "NIETO(A)", "MADRE", "PADRE", "ABUELO(A)"]
+		social_security_number: DF.Data | None
 	# end: auto-generated types
 
 	pass
