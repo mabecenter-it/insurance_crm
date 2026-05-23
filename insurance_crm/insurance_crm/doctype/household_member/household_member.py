@@ -16,6 +16,8 @@ class HouseholdMember(Document):
 
 		birth_date: DF.Date | None
 		first_name: DF.Link
+		gender: DF.Data | None
+		last_name: DF.Data | None
 		needs_coverage: DF.Check
 		parent: DF.Data
 		parentfield: DF.Data
