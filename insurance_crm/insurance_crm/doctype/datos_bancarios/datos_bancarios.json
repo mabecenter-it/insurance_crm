@@ -43,6 +43,7 @@
   {
    "fieldname": "cuenta",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Cuenta"
   },
   {
@@ -129,7 +130,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-25 08:38:34.136185",
+ "modified": "2026-05-25 15:43:19.501384",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Datos Bancarios",

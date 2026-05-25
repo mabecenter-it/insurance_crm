@@ -12,38 +12,17 @@ class OrdendeVenta(Document):
 	from typing import TYPE_CHECKING
 
 	if TYPE_CHECKING:
+		from frappe.contacts.doctype.contact_email.contact_email import ContactEmail
+		from frappe.contacts.doctype.contact_phone.contact_phone import ContactPhone
 		from frappe.types import DF
 
-		from insurance_crm.insurance_crm.doctype.enrollment_document.enrollment_document import (
-			EnrollmentDocument,
-		)
-		from insurance_crm.insurance_crm.doctype.household_member.household_member import HouseholdMember
-
-		aptc_eligible: DF.Check
-		contact: DF.Link | None
-		effective_date: DF.Date | None
-		enrollment_documents: DF.Table[EnrollmentDocument]
-		household_members: DF.Table[HouseholdMember]
-		household_size: DF.Int
-		income: DF.Currency
+		contacto: DF.Link | None
+		correos_de_contacto: DF.Table[ContactEmail]
+		estado_migratorio: DF.Literal[None]
+		fecha_de_nacimiento: DF.Date | None
 		naming_series: DF.Literal["ACA-.YYYY.-.#####"]
-		policy_status: DF.Literal[
-			"",
-			"Sin Digitar",
-			"Pending Documents",
-			"Submitted",
-			"Approved",
-			"Active",
-			"Cancelled",
-			"Expired",
-			"Renewal Pending",
-		]
-		state: DF.Literal[
-			"", "AZ", "CA", "FL", "GA", "IL", "IN", "LA", "MA", "NC", "NE", "NJ", "OH", "SC", "TN", "TX", "WI"
-		]
-		taxes: DF.Literal[
-			"", "Single", "Married Filing Jointly", "Married Filing Separately", "Head of Household"
-		]
+		nombre_completo: DF.Data | None
+		numeros_de_contacto: DF.Table[ContactPhone]
 	# end: auto-generated types
 
 	pass
