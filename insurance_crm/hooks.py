@@ -262,16 +262,9 @@ require_type_annotated_api_methods = True
 
 # import fixtures
 fixtures = [
-
-    "Custom Field",
-    "Property Setter",
-    "Client Script",
-    "Server Script",
-    {
-        "dt": "Carrier",
-        "filters": [
-            ["active", "=", 1]
-        ]
-    }
-
+	"Custom Field",
+	"Property Setter",
+	"Client Script",
+	"Server Script",
+	{"dt": "Carrier", "filters": [["active", "=", 1]]},
 ]
