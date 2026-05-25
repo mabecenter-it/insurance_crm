@@ -36,46 +36,25 @@ class Poliza(Document):
 		gross_premium = self.gross_premium or 0
 		subsidy_amount = self.subsidy_amount or 0
 
-		self.member_responsibility = (
-			gross_premium - subsidy_amount
-		)
+		self.member_responsibility = gross_premium - subsidy_amount
 
 	def validate_member_responsibility(self):
 		if self.member_responsibility < 0:
-			frappe.throw(
-				_("Member Responsibility cannot be negative.")
-			)
+			frappe.throw(_("Member Responsibility cannot be negative."))
 
 	def validate_dates(self):
-		if (
-			self.effective_date
-			and self.termination_date
-			and self.effective_date >= self.termination_date
-		):
-			frappe.throw(
-				_("Effective Date must be before Termination Date.")
-			)
+		if self.effective_date and self.termination_date and self.effective_date >= self.termination_date:
+			frappe.throw(_("Effective Date must be before Termination Date."))
 
 	def validate_carrier(self):
 		if not self.enrollment:
 			return
 
-		enrollment_carrier = frappe.db.get_value(
-			"ACA Enrollment",
-			self.enrollment,
-			"carrier"
-		)
+		enrollment_carrier = frappe.db.get_value("ACA Enrollment", self.enrollment, "carrier")
 
 		if enrollment_carrier != self.carrier:
-			frappe.throw(
-				_("Carrier must match the Enrollment carrier.")
-			)
+			frappe.throw(_("Carrier must match the Enrollment carrier."))
 
 	def on_submit(self):
 		if self.enrollment:
-			frappe.db.set_value(
-				"ACA Enrollment",
-				self.enrollment,
-				"status",
-				"Active"
-			)
+			frappe.db.set_value("ACA Enrollment", self.enrollment, "status", "Active")

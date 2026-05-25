@@ -13,7 +13,10 @@ class OrdendeVenta(Document):
 
 	if TYPE_CHECKING:
 		from frappe.types import DF
-		from insurance_crm.insurance_crm.doctype.enrollment_document.enrollment_document import EnrollmentDocument
+
+		from insurance_crm.insurance_crm.doctype.enrollment_document.enrollment_document import (
+			EnrollmentDocument,
+		)
 		from insurance_crm.insurance_crm.doctype.household_member.household_member import HouseholdMember
 
 		aptc_eligible: DF.Check
@@ -24,9 +27,23 @@ class OrdendeVenta(Document):
 		household_size: DF.Int
 		income: DF.Currency
 		naming_series: DF.Literal["ACA-.YYYY.-.#####"]
-		policy_status: DF.Literal["", "Sin Digitar", "Pending Documents", "Submitted", "Approved", "Active", "Cancelled", "Expired", "Renewal Pending"]
-		state: DF.Literal["", "AZ", "CA", "FL", "GA", "IL", "IN", "LA", "MA", "NC", "NE", "NJ", "OH", "SC", "TN", "TX", "WI"]
-		taxes: DF.Literal["", "Single", "Married Filing Jointly", "Married Filing Separately", "Head of Household"]
+		policy_status: DF.Literal[
+			"",
+			"Sin Digitar",
+			"Pending Documents",
+			"Submitted",
+			"Approved",
+			"Active",
+			"Cancelled",
+			"Expired",
+			"Renewal Pending",
+		]
+		state: DF.Literal[
+			"", "AZ", "CA", "FL", "GA", "IL", "IN", "LA", "MA", "NC", "NE", "NJ", "OH", "SC", "TN", "TX", "WI"
+		]
+		taxes: DF.Literal[
+			"", "Single", "Married Filing Jointly", "Married Filing Separately", "Head of Household"
+		]
 	# end: auto-generated types
 
 	pass
