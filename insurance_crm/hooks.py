@@ -272,6 +272,7 @@ fixtures = [
         "filters": [
             ["active", "=", 1]
         ]
-    }
+    },
+    "Workspace"
 
 ]
