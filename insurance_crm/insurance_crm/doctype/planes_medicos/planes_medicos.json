@@ -30,7 +30,7 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Nombre plan",
-   "unique": 1
+   "unique": 0
   },
   {
    "fieldname": "categoria",
