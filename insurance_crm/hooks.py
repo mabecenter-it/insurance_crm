@@ -266,5 +266,7 @@ fixtures = [
 	"Property Setter",
 	"Client Script",
 	"Server Script",
+	"Workspace",
+	"Report",
 	{"dt": "Carrier", "filters": [["active", "=", 1]]},
 ]
