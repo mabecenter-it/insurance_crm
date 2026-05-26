@@ -50,11 +50,11 @@ class Poliza(Document):
 		if not self.enrollment:
 			return
 
-		enrollment_carrier = frappe.db.get_value("ACA Enrollment", self.enrollment, "carrier")
+		enrollment_carrier = frappe.db.get_value("Orden de venta", self.enrollment, "carrier")
 
 		if enrollment_carrier != self.carrier:
 			frappe.throw(_("Carrier must match the Enrollment carrier."))
 
 	def on_submit(self):
 		if self.enrollment:
-			frappe.db.set_value("ACA Enrollment", self.enrollment, "status", "Active")
+			frappe.db.set_value("Orden de venta", self.enrollment, "status", "Active")
