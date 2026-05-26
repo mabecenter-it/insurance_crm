@@ -273,5 +273,11 @@ fixtures = [
             ["active", "=", 1]
         ]
     },
-    "Workspace"
+    "Workspace",
+    {
+        "dt": "CRM Fields Layout",
+        "filters": [
+            ["dt", "in", ["CRM Lead", "CRM Deal"]]
+        ]
+    }
 ]
