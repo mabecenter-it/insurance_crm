@@ -10,11 +10,12 @@
   "section_break_jqd2",
   "first_name",
   "last_name",
-  "gender",
   "relationship",
   "birth_date",
   "needs_coverage",
-  "social_security_number"
+  "social_security_number",
+  "gender",
+  "estado_migratorio"
  ],
  "fields": [
   {
@@ -46,16 +47,10 @@
    "reqd": 1
   },
   {
-   "fetch_from": "first_name.gender",
-   "fieldname": "gender",
-   "fieldtype": "Data",
-   "label": "Gender",
-   "options": "gender"
-  },
-  {
    "fetch_from": "first_name.last_name",
    "fieldname": "last_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Apellido"
   },
   {
@@ -70,14 +65,33 @@
    "fetch_from": "first_name.custom_social_security_number",
    "fieldname": "social_security_number",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Social Security Number"
+  },
+  {
+   "fetch_from": "first_name.gender",
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "Male\nFemale",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "first_name.custom_estado_migratorio",
+   "fieldname": "estado_migratorio",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Estado migratorio",
+   "options": "\nCIUDADANO\nRESIDENTE\nPERMISO DE TRABAJO\nNOTICIA DE ACCI\u00d3N\nVISA\nASILO POLITICO",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-23 13:03:30.901584",
+ "modified": "2026-05-25 13:44:34.967602",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Household Member",

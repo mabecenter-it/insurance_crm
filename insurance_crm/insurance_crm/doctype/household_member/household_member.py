@@ -15,8 +15,17 @@ class HouseholdMember(Document):
 		from frappe.types import DF
 
 		birth_date: DF.Date | None
+		estado_migratorio: DF.Literal[
+			"",
+			"CIUDADANO",
+			"RESIDENTE",
+			"PERMISO DE TRABAJO",
+			"NOTICIA DE ACCI\u00d3N",
+			"VISA",
+			"ASILO POLITICO",
+		]
 		first_name: DF.Link
-		gender: DF.Data | None
+		gender: DF.Literal["Male", "Female"]
 		last_name: DF.Data | None
 		needs_coverage: DF.Check
 		parent: DF.Data

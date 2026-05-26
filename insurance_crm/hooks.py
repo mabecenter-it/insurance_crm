@@ -261,8 +261,8 @@ require_type_annotated_api_methods = True
 
 
 # import fixtures
+# import fixtures
 fixtures = [
-
     "Custom Field",
     "Property Setter",
     "Client Script",
@@ -274,5 +274,4 @@ fixtures = [
         ]
     },
     "Workspace"
-
 ]
