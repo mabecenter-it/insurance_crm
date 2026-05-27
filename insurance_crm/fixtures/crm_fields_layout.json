@@ -3,8 +3,8 @@
   "docstatus": 0,
   "doctype": "CRM Fields Layout",
   "dt": "CRM Lead",
-  "layout": "[{\"name\":\"first_tab\",\"sections\":[{\"name\":\"person_section\",\"columns\":[{\"name\":\"column_5jrk\",\"fields\":[\"salutation\",\"email\"]},{\"name\":\"column_5CPV\",\"fields\":[\"first_name\",\"mobile_no\"]},{\"name\":\"column_gXOy\",\"fields\":[\"last_name\",\"gender\"]}]},{\"name\":\"lead_section\",\"columns\":[{\"name\":\"column_EO1H\",\"fields\":[\"status\"]},{\"name\":\"column_RWBe\",\"fields\":[\"lead_owner\"]}]}]}]",
-  "modified": "2026-05-26 16:12:20.294718",
+  "layout": "[{\"name\":\"first_tab\",\"sections\":[{\"name\":\"person_section\",\"columns\":[{\"name\":\"column_5jrk\",\"fields\":[\"salutation\",\"email\"]},{\"name\":\"column_5CPV\",\"fields\":[\"first_name\",\"mobile_no\",\"custom_whatsapp\"]},{\"name\":\"column_gXOy\",\"fields\":[\"last_name\",\"gender\"]}]},{\"name\":\"lead_section\",\"columns\":[{\"name\":\"column_EO1H\",\"fields\":[\"status\"]},{\"name\":\"column_RWBe\",\"fields\":[\"lead_owner\"]}]}]}]",
+  "modified": "2026-05-27 08:58:48.291443",
   "name": "CRM Lead-Quick Entry",
   "type": "Quick Entry"
  },
