@@ -191,38 +191,8 @@
   "row_name": null,
   "value": "1"
  },
- {
-  "default_value": null,
-  "doc_type": "Orden de Venta",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "state",
-  "is_system_generated": 0,
-  "modified": "2026-05-21 12:24:49.983213",
-  "module": null,
-  "name": "ACA Enrollment-state-fieldtype",
-  "property": "fieldtype",
-  "property_type": "Select",
-  "row_name": null,
-  "value": "Data"
- },
- {
-  "default_value": null,
-  "doc_type": "ACA Enrollment",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocType",
-  "field_name": null,
-  "is_system_generated": 0,
-  "modified": "2026-05-21 10:30:37.356256",
-  "module": null,
-  "name": "Carrier-main-search_fields",
-  "property": "search_fields",
-  "property_type": "Data",
-  "row_name": null,
-  "value": "carrier_name, payer_id"
- },
+
+
  {
   "default_value": null,
   "doc_type": "Planes Medicos",
@@ -351,38 +321,8 @@
   "row_name": null,
   "value": ""
  },
- {
-  "default_value": null,
-  "doc_type": "Orden de Venta",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "naming_series",
-  "is_system_generated": 1,
-  "modified": "2026-05-21 15:40:08.076071",
-  "module": null,
-  "name": "ACA Enrollment-naming_series-options",
-  "property": "options",
-  "property_type": "Text",
-  "row_name": null,
-  "value": "ACA-.YYYY.-.#####"
- },
- {
-  "default_value": null,
-  "doc_type": "Orden de Venta",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "contact",
-  "is_system_generated": 1,
-  "modified": "2026-05-21 16:57:14.802758",
-  "module": null,
-  "name": "ACA Enrollment-contact-in_list_view",
-  "property": "in_list_view",
-  "property_type": "Check",
-  "row_name": null,
-  "value": "1"
- },
+
+
  {
   "default_value": null,
   "doc_type": "CRM Lead",
@@ -831,38 +771,8 @@
   "row_name": null,
   "value": "0"
  },
- {
-  "default_value": null,
-  "doc_type": "Carrier",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocType",
-  "field_name": null,
-  "is_system_generated": 0,
-  "modified": "2026-05-21 11:11:12.155414",
-  "module": null,
-  "name": "ACA Enrollment-main-naming_rule",
-  "property": "naming_rule",
-  "property_type": "Data",
-  "row_name": null,
-  "value": "By \"Naming Series\" field"
- },
- {
-  "default_value": null,
-  "doc_type": "Orden de Venta",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocField",
-  "field_name": "state",
-  "is_system_generated": 0,
-  "modified": "2026-05-21 12:24:49.998063",
-  "module": null,
-  "name": "ACA Enrollment-state-fetch_from",
-  "property": "fetch_from",
-  "property_type": "Small Text",
-  "row_name": null,
-  "value": "custom_contact_address.state"
- },
+
+
  {
   "default_value": null,
   "doc_type": "Address",
@@ -895,22 +805,7 @@
   "row_name": null,
   "value": "1"
  },
- {
-  "default_value": null,
-  "doc_type": "Contact",
-  "docstatus": 0,
-  "doctype": "Property Setter",
-  "doctype_or_field": "DocType",
-  "field_name": null,
-  "is_system_generated": 0,
-  "modified": "2026-05-22 14:21:55.786851",
-  "module": null,
-  "name": "Contact-main-search_fields",
-  "property": "search_fields",
-  "property_type": "Data",
-  "row_name": null,
-  "value": ""
- },
+
  {
   "default_value": null,
   "doc_type": "Orden de Venta",
