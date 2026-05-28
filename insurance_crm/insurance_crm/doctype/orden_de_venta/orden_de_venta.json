@@ -7,14 +7,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "naming_series",
-  "contacto",
-  "nombre_completo",
-  "fecha_de_nacimiento",
-  "estado_migratorio",
-  "contact_information_section",
-  "numeros_de_contacto",
-  "correos_de_contacto"
+  "naming_series"
  ],
  "fields": [
   {
@@ -22,56 +15,12 @@
    "fieldtype": "Select",
    "label": "Naming series",
    "options": "ACA-.YYYY.-.#####"
-  },
-  {
-   "fieldname": "contacto",
-   "fieldtype": "Link",
-   "label": "Contacto",
-   "options": "Contact"
-  },
-  {
-   "fetch_from": "contacto.full_name",
-   "fieldname": "nombre_completo",
-   "fieldtype": "Data",
-   "label": "Nombre completo",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "contacto.custom_dob",
-   "fieldname": "fecha_de_nacimiento",
-   "fieldtype": "Date",
-   "label": "Fecha de Nacimiento",
-   "read_only": 1
-  },
-  {
-   "fetch_from": "contacto.custom_estado_migratorio",
-   "fieldname": "estado_migratorio",
-   "fieldtype": "Select",
-   "label": "Estado migratorio",
-   "read_only": 1
-  },
-  {
-   "fieldname": "contact_information_section",
-   "fieldtype": "Section Break",
-   "label": "Contact information"
-  },
-  {
-   "fieldname": "numeros_de_contacto",
-   "fieldtype": "Table",
-   "label": "Numeros de contacto",
-   "options": "Contact Phone"
-  },
-  {
-   "fieldname": "correos_de_contacto",
-   "fieldtype": "Table",
-   "label": "Correos de contacto",
-   "options": "Contact Email"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-05-26 11:50:00.754466",
+ "modified": "2026-05-28 13:33:36.114850",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Orden de Venta",

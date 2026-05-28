@@ -1,1 +1,13 @@
-[]
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Orden de Venta",
+  "enabled": 1,
+  "modified": "2026-05-28 14:07:40.804021",
+  "module": null,
+  "name": "get_products_deals",
+  "script": "frappe.ui.form.on('Orden de Venta', {\r\n\r\n    deal(frm) {\r\n\r\n        frappe.call({\r\n            method: \"frappe.client.get\",\r\n            args: {\r\n                doctype: \"CRM Deal\",\r\n                name: frm.doc.deal\r\n            },\r\n            callback(r) {\r\n\r\n                let deal = r.message;\r\n\r\n                frm.clear_table(\"products\");\r\n\r\n                (deal.products || []).forEach(p => {\r\n\r\n                    let row = frm.add_child(\"products\");\r\n\r\n                    row.product_code = p.product_code;\r\n                    row.product_name = p.product_name;\r\n                    row.qty = p.qty;\r\n                    row.rate = p.rate;\r\n                    row.amount = p.amount;\r\n                });\r\n\r\n                frm.refresh_field(\"products\");\r\n            }\r\n        });\r\n    }\r\n});",
+  "view": "Form"
+ }
+]
