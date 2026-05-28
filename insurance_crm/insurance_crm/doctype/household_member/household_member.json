@@ -9,13 +9,15 @@
  "field_order": [
   "section_break_jqd2",
   "first_name",
+  "segundo_nombre",
   "last_name",
   "relationship",
   "birth_date",
   "needs_coverage",
   "social_security_number",
   "gender",
-  "estado_migratorio"
+  "estado_migratorio",
+  "fumador"
  ],
  "fields": [
   {
@@ -33,7 +35,7 @@
   {
    "fetch_from": "first_name.custom_dob",
    "fieldname": "birth_date",
-   "fieldtype": "Date",
+   "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Birth Date",
    "read_only": 1
@@ -51,7 +53,8 @@
    "fieldname": "last_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Apellido"
+   "label": "Apellido",
+   "read_only": 1
   },
   {
    "fieldname": "first_name",
@@ -62,11 +65,12 @@
    "reqd": 1
   },
   {
-   "fetch_from": "first_name.custom_social_security_number",
+   "fetch_from": "first_name.security_social_number",
    "fieldname": "social_security_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Social Security Number"
+   "label": "Social Security Number",
+   "read_only": 1
   },
   {
    "fetch_from": "first_name.gender",
@@ -74,24 +78,34 @@
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Gender",
-   "options": "Male\nFemale",
    "read_only": 1
   },
   {
-   "fetch_from": "first_name.custom_estado_migratorio",
+   "fetch_from": "first_name.middle_name",
+   "fieldname": "segundo_nombre",
+   "fieldtype": "Data",
+   "label": "Segundo nombre"
+  },
+  {
+   "fetch_from": "first_name.estado_migratorio",
    "fieldname": "estado_migratorio",
-   "fieldtype": "Select",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Estado migratorio",
-   "options": "\nCIUDADANO\nRESIDENTE\nPERMISO DE TRABAJO\nNOTICIA DE ACCI\u00d3N\nVISA\nASILO POLITICO",
+   "label": "Estado Migratorio",
    "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "fumador",
+   "fieldtype": "Check",
+   "label": "Fumador"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-25 13:44:34.967602",
+ "modified": "2026-05-28 10:43:20.897498",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Household Member",

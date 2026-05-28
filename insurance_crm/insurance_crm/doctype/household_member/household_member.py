@@ -14,24 +14,18 @@ class HouseholdMember(Document):
 	if TYPE_CHECKING:
 		from frappe.types import DF
 
-		birth_date: DF.Date | None
-		estado_migratorio: DF.Literal[
-			"",
-			"CIUDADANO",
-			"RESIDENTE",
-			"PERMISO DE TRABAJO",
-			"NOTICIA DE ACCI\u00d3N",
-			"VISA",
-			"ASILO POLITICO",
-		]
+		birth_date: DF.Data | None
+		estado_migratorio: DF.Data | None
 		first_name: DF.Link
-		gender: DF.Literal["Male", "Female"]
+		fumador: DF.Check
+		gender: DF.Literal[None]
 		last_name: DF.Data | None
 		needs_coverage: DF.Check
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data
 		relationship: DF.Literal["ESPOSO(A)", "HIJO(A)", "NIETO(A)", "MADRE", "PADRE", "ABUELO(A)"]
+		segundo_nombre: DF.Data | None
 		social_security_number: DF.Data | None
 	# end: auto-generated types
 
