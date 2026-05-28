@@ -279,5 +279,6 @@ fixtures = [
         "filters": [
             ["dt", "in", ["CRM Lead", "CRM Deal"]]
         ]
-    }
+    },
+    "DocType Link"
 ]
