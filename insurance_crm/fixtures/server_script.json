@@ -1,1 +1,40 @@
-[]
+[
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "Before Save",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-05-29 09:08:27.040594",
+  "module": null,
+  "name": "type-card",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Datos Bancarios",
+  "script": "numero = doc.numero_tarjeta or \"\"\n\n# Limpiar caracteres\nnumero = ''.join(filter(str.isdigit, numero))\n\nif numero:\n\n    primer_numero = numero[0]\n\n    if primer_numero == \"4\":\n        doc.tipo_tarjeta = \"Visa\"\n\n    elif primer_numero == \"5\":\n        doc.tipo_tarjeta = \"Mastercard\"\n\n    elif primer_numero == \"3\":\n        doc.tipo_tarjeta = \"American Express\"\n\n    elif primer_numero == \"6\":\n        doc.tipo_tarjeta = \"Discover\"\n\n    else:\n        doc.tipo_tarjeta = \"Unknown\"",
+  "script_type": "DocType Event"
+ },
+ {
+  "allow_guest": 0,
+  "api_method": null,
+  "cron_format": null,
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Server Script",
+  "doctype_event": "After Insert",
+  "enable_rate_limit": 0,
+  "event_frequency": "All",
+  "modified": "2026-05-29 08:58:42.247559",
+  "module": null,
+  "name": "deal_product_to_sales_order",
+  "rate_limit_count": 5,
+  "rate_limit_seconds": 86400,
+  "reference_doctype": "Orden de Venta",
+  "script": "if not doc.flags.get(\"from_crm_sync\"):\r\n\r\n    crm_deal_name = doc.custom_quotation\r\n\r\n    if crm_deal_name:\r\n\r\n        deal = frappe.get_doc(\"CRM Deal\", crm_deal_name)\r\n\r\n        if not deal.products:\r\n            frappe.throw(\r\n                f\"El CRM Deal {crm_deal_name} no tiene productos registrados. \"\r\n                \"Agrega productos al Deal antes de crear la Orden de Venta.\"\r\n            )\r\n\r\n        orden_venta = frappe.get_doc(\"Orden de Venta\", doc.name)\r\n        orden_venta.set(\"custom_products\", [])\r\n\r\n        for row in deal.products:\r\n            orden_venta.append(\"custom_products\", {\r\n                \"product_code\": row.product_code,\r\n                \"product_name\": row.product_name,\r\n                \"qty\":          row.qty,\r\n                \"rate\":         row.rate,\r\n            })\r\n\r\n        orden_venta.flags.ignore_permissions = True\r\n        orden_venta.flags.from_crm_sync = True\r\n        orden_venta.save()",
+  "script_type": "DocType Event"
+ }
+]
