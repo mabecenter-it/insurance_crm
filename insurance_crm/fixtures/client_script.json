@@ -2,17 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Client Script",
-  "dt": "CRM Deal",
-  "enabled": 1,
-  "modified": "2026-05-29 09:16:56.245301",
-  "module": null,
-  "name": "type-card",
-  "script": "frappe.ui.form.on('Datos Bancarios', {\n\n    numero_tarjeta: function(frm, cdt, cdn) {\n\n        console.log(\"EVENTO FUNCIONANDO\");\n\n        let row = locals[cdt][cdn];\n    }\n});",
-  "view": "Form"
- },
- {
-  "docstatus": 0,
-  "doctype": "Client Script",
   "dt": "Orden de Venta",
   "enabled": 1,
   "modified": "2026-05-29 09:01:23.487538",
