@@ -5,7 +5,7 @@
 from frappe.model.document import Document
 
 
-class DatosBancarios(Document):
+class Banco(Document):
 	# begin: auto-generated types
 	# This code is auto-generated. Do not modify anything in this block.
 

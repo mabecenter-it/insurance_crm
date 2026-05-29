@@ -2,28 +2,27 @@
  "actions": [],
  "allow_bulk_edit": 1,
  "allow_rename": 1,
- "creation": "2026-05-25 08:28:42.725793",
+ "creation": "2026-05-29 10:15:03.707628",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "section_break_xuhy"
+  "section_break_ynk3"
  ],
  "fields": [
   {
-   "fieldname": "section_break_xuhy",
-   "fieldtype": "Section Break",
-   "label": "Datos Bancarios"
+   "fieldname": "section_break_ynk3",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-29 10:13:32.615602",
+ "modified": "2026-05-29 10:15:03.707628",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
- "name": "Datos Bancarios",
+ "name": "Banco",
  "owner": "Administrator",
  "permissions": [],
  "row_format": "Dynamic",
