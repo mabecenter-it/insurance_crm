@@ -9,5 +9,16 @@
   "name": "get_products_deals",
   "script": "frappe.ui.form.on(\"Orden de Venta\", {\r\n\r\n    custom_quotation: function(frm) {\r\n\r\n        if (!frm.doc.custom_quotation) return;\r\n\r\n        frm.clear_table(\"custom_products\");\r\n\r\n        frappe.db.get_doc(\"CRM Deal\", frm.doc.custom_quotation)\r\n            .then(deal => {\r\n\r\n                if (!deal.products || deal.products.length === 0) {\r\n                    frappe.msgprint(\"El Deal no tiene productos registrados.\");\r\n                    return;\r\n                }\r\n\r\n                deal.products.forEach(row => {\r\n\r\n                    let child = frm.add_child(\"custom_products\");\r\n\r\n                    child.product_code = row.product_code;\r\n                    child.product_name = row.product_name;\r\n                    child.custom_compañia = row.custom_compañia;\r\n                    child.custom_categoria = row.custom_categoria;\r\n\r\n                });\r\n\r\n                frm.refresh_field(\"custom_products\");\r\n            });\r\n    }\r\n});",
   "view": "Form"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "CRM Deal",
+  "enabled": 1,
+  "modified": "2026-05-29 12:28:49.775018",
+  "module": "Insurance CRM",
+  "name": "TYPE-CARD",
+  "script": "frappe.ui.form.on('Banco', {\r\n\r\n    custom_numero_de_tarjeta(frm, cdt, cdn) {\r\n\r\n        console.log(\"Evento funcionando\");\r\n\r\n    }\r\n\r\n});",
+  "view": "Form"
  }
 ]
