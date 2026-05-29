@@ -280,5 +280,7 @@ fixtures = [
             ["dt", "in", ["CRM Lead", "CRM Deal"]]
         ]
     },
-    "DocType Link"
+    "DocType Link",
+    "CRM Product",
+    "CRM Products"
 ]
