@@ -21,8 +21,9 @@ class DatosBancarios(Document):
 		dirección_de_pago: DF.Data | None
 		direccíon_tarjeta: DF.Data | None
 		fecha_de_vencimiento_tarjeta: DF.Data | None
+		metodo_de_pago: DF.Literal["", "CUENTA CHEKING", "TARJETA"]
 		nombre_del_banco: DF.Data | None
-		número_tarjeta: DF.Data | None
+		numero_tarjeta: DF.Data | None
 		parent: DF.Data
 		parentfield: DF.Data
 		parenttype: DF.Data

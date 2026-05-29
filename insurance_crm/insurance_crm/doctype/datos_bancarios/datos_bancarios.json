@@ -23,8 +23,9 @@
   "direcci\u00f3n_de_pago",
   "tipo_de_cuenta",
   "zipcode",
-  "n\u00famero_tarjeta",
-  "c\u00f3digo_de_seguridad"
+  "numero_tarjeta",
+  "c\u00f3digo_de_seguridad",
+  "metodo_de_pago"
  ],
  "fields": [
   {
@@ -116,21 +117,27 @@
    "label": "ZipCode"
   },
   {
-   "fieldname": "n\u00famero_tarjeta",
+   "fieldname": "c\u00f3digo_de_seguridad",
+   "fieldtype": "Data",
+   "label": "C\u00f3digo de Seguridad"
+  },
+  {
+   "fieldname": "numero_tarjeta",
    "fieldtype": "Data",
    "label": "N\u00famero Tarjeta"
   },
   {
-   "fieldname": "c\u00f3digo_de_seguridad",
-   "fieldtype": "Data",
-   "label": "C\u00f3digo de Seguridad"
+   "fieldname": "metodo_de_pago",
+   "fieldtype": "Select",
+   "label": "Metodo de pago",
+   "options": "\nCUENTA CHEKING\nTARJETA"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-25 15:43:19.501384",
+ "modified": "2026-05-29 08:20:18.928044",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Datos Bancarios",

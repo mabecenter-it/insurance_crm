@@ -84,7 +84,8 @@
    "fetch_from": "first_name.middle_name",
    "fieldname": "segundo_nombre",
    "fieldtype": "Data",
-   "label": "Segundo nombre"
+   "label": "Segundo nombre",
+   "read_only": 1
   },
   {
    "fetch_from": "first_name.estado_migratorio",
@@ -105,7 +106,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-05-28 10:43:20.897498",
+ "modified": "2026-05-28 14:26:59.229198",
  "modified_by": "Administrator",
  "module": "Insurance CRM",
  "name": "Household Member",
