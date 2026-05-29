@@ -4,10 +4,10 @@
   "doctype": "Client Script",
   "dt": "Orden de Venta",
   "enabled": 1,
-  "modified": "2026-05-28 14:07:40.804021",
+  "modified": "2026-05-29 09:01:23.487538",
   "module": null,
   "name": "get_products_deals",
-  "script": "frappe.ui.form.on('Orden de Venta', {\r\n\r\n    deal(frm) {\r\n\r\n        frappe.call({\r\n            method: \"frappe.client.get\",\r\n            args: {\r\n                doctype: \"CRM Deal\",\r\n                name: frm.doc.deal\r\n            },\r\n            callback(r) {\r\n\r\n                let deal = r.message;\r\n\r\n                frm.clear_table(\"products\");\r\n\r\n                (deal.products || []).forEach(p => {\r\n\r\n                    let row = frm.add_child(\"products\");\r\n\r\n                    row.product_code = p.product_code;\r\n                    row.product_name = p.product_name;\r\n                    row.qty = p.qty;\r\n                    row.rate = p.rate;\r\n                    row.amount = p.amount;\r\n                });\r\n\r\n                frm.refresh_field(\"products\");\r\n            }\r\n        });\r\n    }\r\n});",
+  "script": "frappe.ui.form.on(\"Orden de Venta\", {\r\n    refresh: function(frm) {\r\n        if (frm.doc.__islocal && frm.doc.custom_quotation) {\r\n            frm.trigger(\"custom_quotation\");\r\n        }\r\n    },\r\n\r\n    custom_quotation: function(frm) {\r\n        if (!frm.doc.custom_quotation) return;\r\n\r\n        frm.clear_table(\"custom_products\");\r\n\r\n        frappe.db.get_doc(\"CRM Deal\", frm.doc.custom_quotation)\r\n            .then(deal => {\r\n                if (!deal.products || deal.products.length === 0) {\r\n                    frappe.msgprint(\"El Deal no tiene productos registrados.\");\r\n                    return;\r\n                }\r\n\r\n                deal.products.forEach(row => {\r\n                    let child = frm.add_child(\"custom_products\");\r\n                    child.product_code = row.product_code;\r\n                    child.product_name = row.product_name;\r\n                    child.qty          = row.qty;\r\n                    child.rate         = row.rate;\r\n                });\r\n\r\n                frm.refresh_field(\"custom_products\");\r\n            });\r\n    }\r\n});",
   "view": "Form"
  }
 ]
